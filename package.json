@@ -1,0 +1,16 @@
+{
+  "name": "node-js-rabbitmq",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon samples.js"
+  },
+  "dependencies": {
+    "amqplib": "^0.5.6",
+    "uuid": "^8.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
