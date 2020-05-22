@@ -12,17 +12,16 @@ const conn = // get RabbitMQ connection
 const sub = new Subscriber(conn)
 
 sub.subscribe('eventKey');
-sub.on('message', (product) => {
+sub.on('message', (object) => {
     // .. your logic here
-    sub.emit('result', { ...product, _id: Math.ceil(Math.random() * (10000 - 5000) + 1) })
+    sub.emit('result', { ...object, _id: Math.ceil(Math.random() * (10000 - 5000) + 1) })
 });
 
 
 // Creating a Publisher
 
 const payload = {
-    title: 'Product 1',
-    price: 50.47
+    key: 'Object',
 }
 
 const pub = new Publisher(conn);
